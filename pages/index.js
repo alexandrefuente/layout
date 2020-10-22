@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import logo from '../images/logo.png'
+import send from '../images/send.png'
+import balls from '../images/balls.png'
+import humaaans from '../images/humaaans.png'
 
 export default function Home() {
   return (
@@ -8,56 +12,58 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div className={styles.nav}>
+        <header>
+          <img src={ logo } alt="Logo" className={ styles.logo } />
+          <h3 className={ styles.textLogo }>Develop Web.</h3>
+        </header>
+        <nav>
+          <ul className={ styles.navigation }>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Works</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+        <div className={ styles.textMain }>
+          <img src={ balls } alt="Abstract Image" className={ styles.absImagem } />
+          <div className={ styles.intro }>
+            <h1 className={ `${ styles.colorRed } ${ styles.mainTitle }` }>Building amazing projects for Web</h1>
+            <p className={ `${ styles.colorGrey } ${ styles.textInfo }` }>
+              It’s only a prototype of a website, we use to this project only HTML and CSS.
+              We can do amazing things with this skills, like website, app to mobile, etc.
             </p>
-          </a>
+            <div>
+              <button className={ `${ styles.btn } ${ styles.btnPrimary }` }>Get Started</button>
+              <button style={{ marginLeft: 25 }} className={ `${ styles.btn } ${ styles.btnSecondary }` }>About</button>
+            </div>
+          </div>
+        </div>
+        <div className={ styles.imageMain }>
+          <img src={ humaaans } alt="Human image for site" className={ styles.imageSection } />
         </div>
       </main>
 
       <footer className={styles.footer}>
+        <div className={ styles.textFooter }>
+            <span className={ styles.colorRed }>Develop Web.</span> <span className={ styles.colorGrey }>Made by a Developer</span>
+        </div>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+            <img src={ send } alt="Send-me an email" className={ styles.sendFooter } />
         </a>
       </footer>
     </div>
